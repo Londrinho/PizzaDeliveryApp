@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="@string/start_button"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.jimmy.pizzaapp.TitleFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_crustFragment"
+            app:destination="@id/crustFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crustFragment"
+        android:name="com.jimmy.pizzaapp.CrustFragment"
+        android:label="fragment_crust"
+        tools:layout="@layout/fragment_crust" >
+        <action
+            android:id="@+id/action_crustFragment_to_pizzaFragment"
+            app:destination="@id/pizzaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pizzaFragment"
+        android:name="com.jimmy.pizzaapp.PizzaFragment"
+        android:label="fragment_pizza"
+        tools:layout="@layout/fragment_pizza" />
+</navigation>

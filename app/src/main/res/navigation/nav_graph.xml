@@ -28,5 +28,14 @@
         android:id="@+id/pizzaFragment"
         android:name="com.jimmy.pizzaapp.PizzaFragment"
         android:label="fragment_pizza"
-        tools:layout="@layout/fragment_pizza" />
+        tools:layout="@layout/fragment_pizza" >
+        <action
+            android:id="@+id/action_pizzaFragment_to_drinkFragment"
+            app:destination="@id/drinkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinkFragment"
+        android:name="com.jimmy.pizzaapp.DrinkFragment"
+        android:label="fragment_drink"
+        tools:layout="@layout/fragment_drink" />
 </navigation>

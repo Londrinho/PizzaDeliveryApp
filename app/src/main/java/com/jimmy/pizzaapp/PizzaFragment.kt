@@ -26,5 +26,14 @@ class PizzaFragment : Fragment() {
 
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.nextButton.setOnClickListener { goToDrinksScreen() }
+
+    }
+    fun goToDrinksScreen(){
+        findNavController().navigate(R.id.action_pizzaFragment_to_drinkFragment)
+    }
 
 }

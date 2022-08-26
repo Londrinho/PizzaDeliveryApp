@@ -15,105 +15,92 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+
+            <TextView
+                android:id="@+id/order_summary_label"
+                android:text="@string/order_summary"
+                android:textStyle="bold"
+                style="@style/NameStyle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:focusable="true"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/order_summary_label"
-                    android:text="@string/order_summary"
-                    android:textStyle="bold"
-                    style="@style/NameStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_StartOf="parent"
-                    app:layout_constraintEnd_Endof="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
 
-                <TextView
-                    android:id="@+id/crust_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/crust"
-                    android:textAllCaps="true"
-                    android:textStyle="bold"/>
 
-                <TextView
-                    android:id="@+id/crust_chosen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="16dp"
-                    tools:text="Deep Pan"/>
+            <TextView
+                android:id="@+id/crust_chosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                tools:text="Deep Pan"/>
 
-                <View
-                    android:id="@+id/divider_one"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black"/>
+            <View
+                android:id="@+id/divider_one"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
 
-                <TextView
-                    android:id="@+id/pizza_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/pizza"
-                    android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/pizza_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/pizza"
+                android:textStyle="bold"/>
 
-                <TextView
-                    android:id="@+id/pizza_chosen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="16dp"
-                    tools:text="Margarita" />
+            <TextView
+                android:id="@+id/pizza_chosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                tools:text="Margarita" />
 
-                <View
-                    android:id="@+id/divider_two"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black"/>
+            <View
+                android:id="@+id/divider_two"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
 
-                <TextView
-                    android:id="@+id/drinks_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/drinks"
-                    android:textStyle="bold"
-                    android:textAllCaps="true"
-                    android:layout_marginTop="10dp" />
+            <TextView
+                android:id="@+id/drinks_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drinks"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_marginTop="10dp" />
 
-                <TextView
-                    android:id="@+id/drinks_chosen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    tools:text="@string/coke"/>
+            <TextView
+                android:id="@+id/drinks_chosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                tools:text="@string/coke"/>
 
-                <View
-                    android:id="@+id/divider_three"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black"/>
+            <View
+                android:id="@+id/divider_three"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
 
-                <TextView
-                    android:id="@+id/subtotal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="15dp"
-                    android:text="@string/subtotal"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_gravity="end"
-                    app:layout_constraintTop_toBottomOf="@id/divider_three"
-                    tools:text="Subtotal £15.00" />
+            <TextView
+                android:id="@+id/subtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:text="@string/subtotal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_gravity="end"
+                app:layout_constraintTop_toBottomOf="@id/divider_three"
+                tools:text="Subtotal £15.00" />
 
-            </LinearLayout>
 
             <Button
                 android:id="@+id/send_order_btn"

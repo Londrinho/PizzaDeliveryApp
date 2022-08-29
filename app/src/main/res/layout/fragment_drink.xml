@@ -44,6 +44,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/coke"
+                    android:checked="@{viewModel.drinks.equals(@string/coke)}"
+                    android:onClick="@{() -> viewModel.setDrinks(@string/coke)}"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -51,6 +53,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lemonade"
+                    android:checked="@{viewModel.drinks.equals(@string/lemonade)}"
+                    android:onClick="@{() -> viewModel.setDrinks(@string/lemonade)}"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -58,6 +62,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ginger_beer"
+                    android:checked="@{viewModel.drinks.equals(@string/ginger_beer)}"
+                    android:onClick="@{() -> viewModel.setDrinks(@string/ginger_beer)}"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -65,6 +71,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/orange_juice"
+                    android:checked="@{viewModel.drinks.equals(@string/orange_juice)}"
+                    android:onClick="@{() -> viewModel.setDrinks(@string/orange_juice)}"
                     android:textStyle="bold" />
 
             </RadioGroup>

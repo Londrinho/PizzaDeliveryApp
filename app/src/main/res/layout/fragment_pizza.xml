@@ -45,6 +45,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/margarita"
+                    android:checked="@{viewModel.pizza.equals(@string/margarita)}"
+                    android:onClick="@{() -> viewModel.setPizza(@string/margarita)}"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -52,6 +54,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/beef_special"
+                    android:checked="@{viewModel.pizza.equals(@string/beef_special)}"
+                    android:onClick="@{() -> viewModel.setPizza(@string/beef_special)}"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -59,6 +63,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/vegetarian_supreme"
+                    android:checked="@{viewModel.pizza.equals(@string/vegetarian_supreme)}"
+                    android:onClick="@{() -> viewModel.setPizza(@string/vegetarian_supreme)}"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -66,6 +72,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/brazilian_treat"
+                    android:checked="@{viewModel.pizza.equals(@string/brazilian_treat)}"
+                    android:onClick="@{() -> viewModel.setPizza(@string/brazilian_treat)}"
                     android:textStyle="bold" />
 
             </RadioGroup>

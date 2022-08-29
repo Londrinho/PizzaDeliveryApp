@@ -15,6 +15,13 @@ class OrderViewModel : ViewModel() {
     private val _drinks = MutableLiveData<String>()
     val drinks: LiveData<String> = _drinks
 
+    private val _price = MutableLiveData<Double>()
+    val price: LiveData<Double> = _price
+
+    init {
+        resetOrder()
+    }
+
     fun setCrust(crustType: String){
          _crust.value = crustType
     }
@@ -27,8 +34,16 @@ class OrderViewModel : ViewModel() {
         _drinks.value = drinks
     }
 
+
+
     fun hasNoCrust(): Boolean{
         return _crust.value.isNullOrEmpty()
+    }
+
+    fun resetOrder(){
+        _crust.value = ""
+        _pizza.value = ""
+        _drinks.value = ""
     }
 
 }

@@ -4,6 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DrinkFragment">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.jimmy.pizzaapp.model.OrderViewModel" />
+    </data>
+
     <ScrollView
         android:background="#ffeb3b"
         android:layout_width="match_parent"

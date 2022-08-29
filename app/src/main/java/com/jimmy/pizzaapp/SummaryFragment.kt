@@ -6,10 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import com.jimmy.pizzaapp.databinding.FragmentSummaryBinding
+import com.jimmy.pizzaapp.model.OrderViewModel
 
 
 class SummaryFragment : Fragment() {
+
+    private val sharedViewModel: OrderViewModel by activityViewModels()
 
     private lateinit var binding: FragmentSummaryBinding
 
@@ -23,5 +27,12 @@ class SummaryFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        binding?.apply {
+            viewModel = sharedViewModel
+        }
+
+    }
 }

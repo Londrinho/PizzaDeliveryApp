@@ -27,4 +27,8 @@ class OrderViewModel : ViewModel() {
         _drinks.value = drinks
     }
 
+    fun hasNoCrust(): Boolean{
+        return _crust.value.isNullOrEmpty()
+    }
+
 }

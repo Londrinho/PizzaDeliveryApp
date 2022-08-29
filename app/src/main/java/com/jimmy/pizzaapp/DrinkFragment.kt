@@ -6,11 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.jimmy.pizzaapp.databinding.FragmentDrinkBinding
+import com.jimmy.pizzaapp.model.OrderViewModel
 
 
 class DrinkFragment : Fragment() {
+
+    private val sharedViewModel: OrderViewModel by activityViewModels()
 
     private lateinit var binding: FragmentDrinkBinding
 
@@ -27,7 +31,13 @@ class DrinkFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.nextButton.setOnClickListener { goToOrderScreen()  }
+        binding?.apply {
+            viewModel = sharedViewModel
+
+            nextButton.setOnClickListener { goToOrderScreen()  }
+        }
+
+
 
     }
 

@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CrustFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.jimmy.pizzaapp.model.OrderViewModel" />
+    </data>
     
     <ScrollView
         android:background="#ffeb3b"
@@ -39,6 +45,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/deep_pan"
+                    android:checked="@{viewModel.crust.equals(@string/deep_pan)}"
+                    android:onClick="@{() -> viewModel.setCrust(@string/deep_pan)}"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -46,6 +54,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/thin_crust"
+                    android:checked="@{viewModel.crust.equals(@string/thin_crust)}"
+                    android:onClick="@{() -> viewModel.setCrust(@string/thin_crust)}"
                     android:textStyle="bold" />
             </RadioGroup>
 

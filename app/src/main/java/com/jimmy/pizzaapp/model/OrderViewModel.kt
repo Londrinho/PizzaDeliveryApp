@@ -28,7 +28,7 @@ class OrderViewModel : ViewModel() {
 
     fun setCrust(crustType: String){
          _crust.value = crustType
-        updatePrice()
+
 
     }
 
@@ -36,6 +36,8 @@ class OrderViewModel : ViewModel() {
         _pizza.value = pizza
         if(_pizza.value == "MARGARITA"){
             updatePriceForMargarita()
+        } else {
+            updatePrice()
         }
 
     }

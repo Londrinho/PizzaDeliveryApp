@@ -34,6 +34,7 @@ class CrustFragment : Fragment() {
         binding?.apply {
             viewModel = sharedViewModel
             nextBtn.setOnClickListener { gotToPizzaScreen() }
+            lifecycleOwner = viewLifecycleOwner
         }
 
 

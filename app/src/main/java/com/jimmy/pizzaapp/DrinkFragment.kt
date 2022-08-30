@@ -35,6 +35,8 @@ class DrinkFragment : Fragment() {
             viewModel = sharedViewModel
 
             nextButton.setOnClickListener { goToOrderScreen()  }
+
+            lifecycleOwner = viewLifecycleOwner
         }
 
 

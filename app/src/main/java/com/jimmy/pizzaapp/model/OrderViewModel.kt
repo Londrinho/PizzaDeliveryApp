@@ -4,6 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
+private const val PRICE_PER_PIZZA = 8.00
+
 class OrderViewModel : ViewModel() {
 
     private val _crust = MutableLiveData<String>()
@@ -28,6 +30,7 @@ class OrderViewModel : ViewModel() {
 
     fun setPizza(pizza: String){
         _pizza.value = pizza
+        updatePrice()
     }
 
     fun setDrinks(drinks: String){
@@ -44,6 +47,10 @@ class OrderViewModel : ViewModel() {
         _crust.value = ""
         _pizza.value = ""
         _drinks.value = ""
+    }
+
+    private fun updatePrice(){
+        _price.value = PRICE_PER_PIZZA
     }
 
 }

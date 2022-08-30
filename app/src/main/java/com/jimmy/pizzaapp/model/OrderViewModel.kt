@@ -2,7 +2,9 @@ package com.jimmy.pizzaapp.model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import java.text.NumberFormat
 
 private const val PRICE_PER_PIZZA = 8.00
 private const val PRICE_PER_PIZZA_MARGARITA = 5.00
@@ -20,7 +22,9 @@ class OrderViewModel : ViewModel() {
     val drinks: LiveData<String> = _drinks
 
     private val _price = MutableLiveData<Double>()
-    val price: LiveData<Double> = _price
+    val price: LiveData<String> = Transformations.map(_price) {
+        NumberFormat.getCurrencyInstance().format(it)
+    }
 
     init {
         resetOrder()

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 
 private const val PRICE_PER_PIZZA = 8.00
 private const val PRICE_PER_PIZZA_MARGARITA = 5.00
+private const val PRICE_PER_DRINK = 1.00
 
 class OrderViewModel : ViewModel() {
 
@@ -41,6 +42,7 @@ class OrderViewModel : ViewModel() {
 
     fun setDrinks(drinks: String){
         _drinks.value = drinks
+        updatePriceWithDrink()
     }
 
 
@@ -62,6 +64,10 @@ class OrderViewModel : ViewModel() {
 
     private fun updatePriceForMargarita(){
         _price.value = PRICE_PER_PIZZA_MARGARITA
+    }
+
+    private fun updatePriceWithDrink(){
+        _price.value = _price.value?.plus(PRICE_PER_DRINK)
     }
 
 }

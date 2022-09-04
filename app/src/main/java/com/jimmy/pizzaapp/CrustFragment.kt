@@ -31,6 +31,8 @@ class CrustFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //binding?.crustFragment = this
+
         binding?.apply {
             viewModel = sharedViewModel
             nextBtn.setOnClickListener { gotToPizzaScreen() }

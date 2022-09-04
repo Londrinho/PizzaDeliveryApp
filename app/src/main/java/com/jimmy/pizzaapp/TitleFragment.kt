@@ -27,7 +27,9 @@ class TitleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.startBtn.setOnClickListener { goToCrustSelection() }
+        binding?.titleFragment = this
+
+        //binding.startBtn.setOnClickListener { goToCrustSelection() }
     }
 
     fun goToCrustSelection(){

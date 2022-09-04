@@ -4,6 +4,12 @@
     tools:context=".TitleFragment"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="titleFragment"
+            type="com.jimmy.pizzaapp.TitleFragment" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -42,6 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#ff3d00"
+                android:onClick="@{() -> titleFragment.goToCrustSelection()}"
                 android:text="@string/start_button"
                 android:textColor="#F3EDED" />
 

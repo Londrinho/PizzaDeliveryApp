@@ -1,6 +1,8 @@
 package com.jimmy.pizzaapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract.Intents.Insert.ACTION
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +15,11 @@ import com.jimmy.pizzaapp.model.OrderViewModel
 
 class SummaryFragment : Fragment() {
 
+    private lateinit var binding: FragmentSummaryBinding
+
     private val sharedViewModel: OrderViewModel by activityViewModels()
 
-    private lateinit var binding: FragmentSummaryBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,10 +35,32 @@ class SummaryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
+            lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
 
-            lifecycleOwner = viewLifecycleOwner
         }
 
+        binding.sendOrderBtn.setOnClickListener { sendOrder() }
     }
+
+    fun sendOrder(){
+        val orderSummary = getString(
+            R.string.order_details,
+            sharedViewModel.crust.value.toString(),
+            sharedViewModel.pizza.value.toString(),
+            sharedViewModel.drinks.toString(),
+            sharedViewModel.price.value.toString()
+        )
+
+        val intent = Intent(Intent.ACTION_SEND)
+            .setType("text/plain")
+            .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.new_pizza_order))
+            .putExtra(Intent.EXTRA_TEXT, orderSummary)
+
+        if (activity?.packageManager?.resolveActivity(intent, 0) != null) {
+            startActivity(intent)
+        }
+    }
+
+
 }

@@ -23,4 +23,6 @@
     <string name="orange_juice">Orange Juice</string>
     <string name="order_summary">Order Summary</string>
     <string name="send_order">Send Order</string>
+    <string name="new_pizza_order">New Pizza Order</string>
+    <string name="order_details">Crust: %1$s crust \n Pizza: %2$s \nDrinks: %3$s \n Total: %4$s \n\n Thank you!</string>
 </resources>

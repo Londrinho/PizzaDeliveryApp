@@ -22,13 +22,14 @@
 
             <TextView
                 android:id="@+id/drinks_text"
+                style="@style/NameStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
                 android:text="@string/drinks"
-                style="@style/NameStyle"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <RadioGroup
                 android:id="@+id/drinks_selection"

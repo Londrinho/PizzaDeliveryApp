@@ -28,14 +28,15 @@
 
             <TextView
                 android:id="@+id/order_summary_label"
-                android:text="@string/order_summary"
-                android:textStyle="bold"
                 style="@style/NameStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/aladin"
+                android:text="@string/order_summary"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/crust_label"

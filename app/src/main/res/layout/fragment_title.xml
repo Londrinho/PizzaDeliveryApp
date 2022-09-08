@@ -12,49 +12,71 @@
     </data>
 
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffeb3b">
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:scaleType="centerCrop"
+            android:src="@drawable/pizza"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-            <ImageView
-                android:id="@+id/pizza_image"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="80dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/pizzapic" />
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:padding="16dp">-->
 
-            <TextView
-                android:id="@+id/title_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/title_of_pizza_place"
-                android:textAlignment="center"
-                android:textSize="34sp"
-                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/start_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="#ff3d00"
-                android:onClick="@{() -> titleFragment.goToCrustSelection()}"
-                android:text="@string/start_button"
-                android:textColor="#F3EDED" />
+        <!--            <ImageView-->
+        <!--                android:id="@+id/pizza_image"-->
+        <!--                android:layout_width="300dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_marginTop="80dp"-->
+        <!--                android:scaleType="centerInside"-->
+        <!--                android:src="@drawable/pizzapic" />-->
 
-        </LinearLayout>
-    </ScrollView>
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:fontFamily="cursive"
+            android:text="@string/title_of_pizza_place"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/start_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="92dp"
+            android:backgroundTint="#ff3d00"
+            android:onClick="@{() -> titleFragment.goToCrustSelection()}"
+            android:text="@string/start_button"
+            android:textColor="#F3EDED"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+<!--    </LinearLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

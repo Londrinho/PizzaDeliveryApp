@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.jimmy.pizzaapp.TitleFragment"
-        android:label="@string/home"
+        android:label="@string/home_title"
         tools:layout="@layout/fragment_title" >
         <action
             android:id="@+id/action_titleFragment_to_crustFragment"

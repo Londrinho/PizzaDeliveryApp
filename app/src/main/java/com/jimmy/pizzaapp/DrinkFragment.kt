@@ -37,6 +37,8 @@ class DrinkFragment : Fragment() {
             nextButton.setOnClickListener { goToOrderScreen()  }
 
             lifecycleOwner = viewLifecycleOwner
+
+            cancelButton.setOnClickListener { cancelOrder() }
         }
 
 
@@ -45,6 +47,13 @@ class DrinkFragment : Fragment() {
 
     fun goToOrderScreen(){
         findNavController().navigate(R.id.action_drinkFragment_to_summaryFragment)
+    }
+
+    fun cancelOrder(){
+
+        sharedViewModel.resetOrder()
+
+        findNavController().navigate(R.id.action_drinkFragment_to_titleFragment)
     }
 
 

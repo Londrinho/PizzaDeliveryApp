@@ -44,4 +44,6 @@ class TitleFragment : Fragment() {
     }
 
 
-}
+}//TODO Sort out cancel button, add pizza size as an option,
+
+//TODO add the option to add toppings

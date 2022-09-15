@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.jimmy.pizzaapp.databinding.FragmentSummaryBinding
 import com.jimmy.pizzaapp.model.OrderViewModel
 
@@ -41,6 +42,8 @@ class SummaryFragment : Fragment() {
         }
 
         binding.sendOrderBtn.setOnClickListener { sendOrder() }
+
+        binding.cancelBtn.setOnClickListener { cancelOrder() }
     }
 
     fun sendOrder(){
@@ -60,6 +63,12 @@ class SummaryFragment : Fragment() {
         if (activity?.packageManager?.resolveActivity(intent, 0) != null) {
             startActivity(intent)
         }
+    }
+
+    fun cancelOrder(){
+        sharedViewModel.resetOrder()
+
+        findNavController().navigate(R.id.action_summaryFragment_to_titleFragment)
     }
 
 

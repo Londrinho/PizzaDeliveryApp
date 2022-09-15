@@ -37,6 +37,8 @@ class CrustFragment : Fragment() {
             viewModel = sharedViewModel
             nextBtn.setOnClickListener { gotToPizzaScreen() }
             lifecycleOwner = viewLifecycleOwner
+
+            cancelBtn.setOnClickListener { cancelOrder() }
         }
 
 
@@ -47,6 +49,12 @@ class CrustFragment : Fragment() {
             sharedViewModel.setCrust(getString(R.string.deep_pan))
         }
         findNavController().navigate(R.id.action_crustFragment_to_pizzaFragment)
+    }
+
+    fun cancelOrder(){
+        sharedViewModel.resetOrder()
+
+        findNavController().navigate(R.id.action_crustFragment_to_titleFragment)
     }
 
 

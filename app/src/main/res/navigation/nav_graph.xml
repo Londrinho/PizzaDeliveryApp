@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_crustFragment_to_pizzaFragment"
             app:destination="@id/pizzaFragment" />
+        <action
+            android:id="@+id/action_crustFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/pizzaFragment"
@@ -32,6 +35,9 @@
         <action
             android:id="@+id/action_pizzaFragment_to_drinkFragment"
             app:destination="@id/drinkFragment" />
+        <action
+            android:id="@+id/action_pizzaFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/drinkFragment"
@@ -41,10 +47,17 @@
         <action
             android:id="@+id/action_drinkFragment_to_summaryFragment"
             app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_drinkFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
         android:name="com.jimmy.pizzaapp.SummaryFragment"
         android:label="@string/order_summary"
-        tools:layout="@layout/fragment_summary" />
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/action_summaryFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
 </navigation>
